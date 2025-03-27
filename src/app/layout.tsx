@@ -1,4 +1,3 @@
-// app/layout.tsx
 import type React from "react"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
@@ -20,13 +19,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es" suppressHydrationWarning>
-      <body className={inter.className}>
+      <body className={`${inter.className} bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100`}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
           <div className="min-h-screen flex flex-col">
             <div className="flex-grow">
               {children}
             </div>
-            <footer className="py-6 border-t">
+            <footer className="py-6 border-t border-gray-200 dark:border-gray-800">
               <div className="container mx-auto px-4 flex justify-center">
                 <SocialLinks />
               </div>

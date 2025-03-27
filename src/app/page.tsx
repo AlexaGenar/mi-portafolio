@@ -6,9 +6,9 @@ import Link from "next/link"
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-white py-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <div className="min-h-screen bg-white dark:bg-gray-900 py-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
       <div className="flex justify-between items-center mb-8">
-        <Link href="/" className="text-xl font-bold no-underline">
+        <Link href="/" className="text-xl font-bold no-underline text-gray-900 dark:text-white">
           Inicio
         </Link>
         <ModeToggle />
@@ -19,13 +19,13 @@ export default function HomePage() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 0.1 }}
           transition={{ delay: 0.5, duration: 1 }}
-          className="absolute -top-24 -right-24 w-96 h-96 bg-pink-300 rounded-full mix-blend-multiply filter blur-3xl opacity-10"
+          className="absolute -top-24 -right-24 w-96 h-96 bg-pink-300 dark:bg-pink-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10"
         />
         <motion.div 
           initial={{ opacity: 0 }}
           animate={{ opacity: 0.1 }}
           transition={{ delay: 0.7, duration: 1 }}
-          className="absolute -bottom-24 -left-24 w-96 h-96 bg-purple-300 rounded-full mix-blend-multiply filter blur-3xl opacity-10"
+          className="absolute -bottom-24 -left-24 w-96 h-96 bg-purple-300 dark:bg-purple-600 rounded-full mix-blend-multiply filter blur-3xl opacity-10"
         />
         
         {/* Título principal con gradiente */}
@@ -37,7 +37,7 @@ export default function HomePage() {
           <h1 className="text-5xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-500">
             Génesis Gómez
           </h1>
-          <p className="text-2xl mt-2 font-light tracking-tight text-gray-600">
+          <p className="text-2xl mt-2 font-light tracking-tight text-gray-600 dark:text-gray-300">
             Front End Engineer
           </p>
         </motion.div>
@@ -50,15 +50,15 @@ export default function HomePage() {
             transition={{ delay: 0.2, duration: 0.6 }}
             className="lg:col-span-7"
           >
-            <div className="prose prose-lg max-w-none">
-              <p className="text-2xl font-light leading-relaxed text-gray-600">
+            <div className="prose prose-lg max-w-none dark:prose-invert">
+              <p className="text-2xl font-light leading-relaxed text-gray-600 dark:text-gray-300">
                 Bienvenido a mi <span className="font-medium text-pink-500">portafolio profesional</span>. 
                 Soy una desarrolladora enfocada en construir
                 <span className="font-medium text-purple-500"> aplicaciones web</span> que sean
                 tan <span className="font-medium text-pink-500">hermosas como eficientes</span>.
               </p>
               
-              <p className="mt-6">
+              <p className="mt-6 text-gray-700 dark:text-gray-300">
                 Mi pasión es crear experiencias digitales que no solo se vean bien,
                 sino que también sean intuitivas, accesibles y optimizadas para el rendimiento.
                 Siempre estoy aprendiendo nuevas tecnologías y metodologías para mejorar
@@ -73,7 +73,7 @@ export default function HomePage() {
               transition={{ delay: 0.6, duration: 0.5 }}
               className="mt-12"
             >
-              <h3 className="text-xl font-bold text-gray-900 mb-6">Explora mi trabajo</h3>
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-6">Explora mi trabajo</h3>
               
               {/* Contenedor centrado para los botones */}
               <div className="flex flex-wrap gap-4 justify-center lg:justify-start ml-10">
@@ -85,19 +85,19 @@ export default function HomePage() {
                 </a>
                 <a 
                   href="/experience" 
-                  className="inline-block bg-white text-pink-500 font-medium py-4 px-8 rounded-full shadow-md border border-pink-200 transition-all duration-300 w-48 text-center no-underline z-10 relative"
+                  className="inline-block bg-white dark:bg-gray-800 text-pink-500 font-medium py-4 px-8 rounded-full shadow-md border border-pink-200 dark:border-pink-800 transition-all duration-300 w-48 text-center no-underline z-10 relative"
                 >
                   Experiencia
                 </a>
                 <a 
                   href="/projects" 
-                  className="inline-block bg-white text-pink-500 font-medium py-4 px-8 rounded-full shadow-md border border-pink-200 transition-all duration-300 w-48 text-center no-underline z-10 relative"
+                  className="inline-block bg-white dark:bg-gray-800 text-pink-500 font-medium py-4 px-8 rounded-full shadow-md border border-pink-200 dark:border-pink-800 transition-all duration-300 w-48 text-center no-underline z-10 relative"
                 >
                   Proyectos
                 </a>
                 <a 
                   href="/curriculum" 
-                  className="inline-block bg-white text-pink-500 font-medium py-4 px-8 rounded-full shadow-md border border-pink-200 transition-all duration-300 w-48 text-center no-underline z-10 relative"
+                  className="inline-block bg-white dark:bg-gray-800 text-pink-500 font-medium py-4 px-8 rounded-full shadow-md border border-pink-200 dark:border-pink-800 transition-all duration-300 w-48 text-center no-underline z-10 relative"
                 >
                   Curriculum
                 </a>
@@ -114,8 +114,8 @@ export default function HomePage() {
           >
             {/* Foto con efectos visuales */}
             <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-pink-200 to-purple-200 transform -rotate-6 rounded-full" />
-              <div className="relative rounded-full overflow-hidden border-4 border-white shadow-xl w-64 h-64 mx-auto">
+              <div className="absolute inset-0 bg-gradient-to-r from-pink-200 to-purple-200 dark:from-pink-300 dark:to-purple-400 transform -rotate-6 rounded-full" />
+              <div className="relative rounded-full overflow-hidden border-4 border-white dark:border-gray-800 shadow-xl w-64 h-64 mx-auto">
                 {/* Usamos un div con gradiente en lugar de una imagen que no existe */}
                 <div className="w-full h-full bg-gradient-to-br from-pink-300 to-purple-400 flex items-center justify-center">
                   <span className="text-white text-opacity-30 text-4xl font-light">GG</span>
@@ -127,13 +127,13 @@ export default function HomePage() {
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
                 transition={{ delay: 0.9, type: "spring" }}
-                className="absolute -bottom-6 -right-6 w-24 h-24 bg-yellow-200 rounded-full mix-blend-multiply filter blur-xl opacity-70"
+                className="absolute -bottom-6 -right-6 w-24 h-24 bg-yellow-200 dark:bg-yellow-300 rounded-full mix-blend-multiply filter blur-xl opacity-70"
               />
               <motion.div 
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
                 transition={{ delay: 1.1, type: "spring" }}
-                className="absolute -top-6 -left-6 w-24 h-24 bg-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-70"
+                className="absolute -top-6 -left-6 w-24 h-24 bg-blue-200 dark:bg-blue-300 rounded-full mix-blend-multiply filter blur-xl opacity-70"
               />
             </div>
             
@@ -142,15 +142,15 @@ export default function HomePage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5, duration: 0.6 }}
-              className="mt-16 bg-white shadow-lg rounded-xl p-6 border border-gray-100"
+              className="mt-16 bg-white dark:bg-gray-800 shadow-lg rounded-xl p-6 border border-gray-100 dark:border-gray-700"
             >
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Tecnologías Favoritas</h3>
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">Tecnologías Favoritas</h3>
               
               <div className="flex flex-wrap gap-3">
                 {["React", "Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Node.js", "GraphQL"].map((tech) => (
                   <span 
                     key={tech} 
-                    className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gradient-to-r from-pink-50 to-purple-50 text-pink-700 border border-pink-100"
+                    className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gradient-to-r from-pink-50 to-purple-50 dark:from-pink-900 dark:to-purple-900 text-pink-700 dark:text-pink-300 border border-pink-100 dark:border-pink-800"
                   >
                     {tech}
                   </span>
