@@ -8,7 +8,7 @@ import { SocialLinks } from "./components/social-links"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Génesis Gómez | Front End Engineer",
+  title: "Génesis Gómez | Frontend Developer",
   description: "Portfolio personal de Génesis Gómez, Front End Engineer",
 }
 
