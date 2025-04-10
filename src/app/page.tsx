@@ -38,7 +38,7 @@ export default function HomePage() {
             Génesis Gómez
           </h1>
           <p className="text-2xl mt-2 font-light tracking-tight text-gray-600 dark:text-gray-300">
-            Front End Engineer
+            Frontend Developer
           </p>
         </motion.div>
         
@@ -96,11 +96,12 @@ export default function HomePage() {
                   Proyectos
                 </a>
                 <a 
-                  href="/curriculum" 
+                 href="/cv.pdf" 
+                 download
                   className="inline-block bg-white dark:bg-gray-800 text-pink-500 font-medium py-4 px-8 rounded-full shadow-md border border-pink-200 dark:border-pink-800 transition-all duration-300 w-48 text-center no-underline z-10 relative"
                 >
-                  Curriculum
-                </a>
+                Descargar CV
+               </a>
               </div>
             </motion.div>
           </motion.div>
