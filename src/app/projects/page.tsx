@@ -7,6 +7,7 @@ import { ExternalLink, Github } from 'lucide-react'
 import { ModeToggle } from "../components/mode-toggle"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/app/components/ui/card"
 import { Button } from "../components/ui/button"
+import { JSX } from "react"
 
 export default function ProjectsPage() {
   return (
@@ -128,10 +129,18 @@ export default function ProjectsPage() {
                 transition={{ delay: 0.5, duration: 0.5 }}
               >
                 <ProjectCard
-                  title="E-commerce Moderno"
-                  description="Tienda en línea con carrito de compras, autenticación de usuarios y pasarela de pagos."
-                  image="/placeholder.svg?height=300&width=600"
-                  technologies={["Next.js", "TypeScript", "Tailwind CSS", "Stripe"]}
+                  title="SAD-Municipal"
+                  description= {
+                  <> 
+                  <p>La Municipalidad de Nandayure, en el área de Recursos Humanos, gestionaba todas sus actividades de forma manual utilizando papel. 
+                  Para mejorar la eficiencia y organización, se desarrolló un sistema de gestión que permite ordenar diversas solicitudes, como vacaciones, boletas de pago y constancias salariales.
+                  Además, el sistema facilita la gestión de documentos y la automatización de procesos administrativos. </p>
+                    <p>Mi contribución al proyecto fue en el área del front-end, donde me encargué de diseñar e implementar las interfaces de usuario de los distintos módulos, como la gestión de solicitudes y documentos. Mi enfoque estuvo en garantizar la usabilidad y accesibilidad del sistema para los usuarios finales dentro de la municipalidad.</p> 
+                       <p>El sistema fue desarrollado utilizando tecnologías modernas de desarrollo web, como Next.js, React y Tailwind CSS, para garantizar una interfaz de usuario dinámica, atractiva y eficiente. Estas tecnologías permiten una experiencia de usuario fluida y un diseño responsivo adecuado para los requerimientos de la municipalidad.</p> 
+                       </>
+                       }
+                  image="/sad_municipal.png"
+                  technologies={["Next.js", "TypeScript", "Tailwind CSS", "React", "MySQL", "Nest.js"]}
                   demoUrl="https://ejemplo.com"
                   repoUrl="https://github.com/usuario/proyecto"
                 />
@@ -143,40 +152,46 @@ export default function ProjectsPage() {
                 transition={{ delay: 0.7, duration: 0.5 }}
               >
                 <ProjectCard
-                  title="Dashboard Analítico"
-                  description="Panel de control para visualización de datos con gráficos interactivos y filtros avanzados."
+                  title="Innovacion y Conocimiento"
+                  description={
+                    <>
+                      <p>
+                        El proyecto consiste en el diseño e implementación de una base de datos para una universidad ficticia llamada Universidad Innovación y Conocimiento.
+                        La base de datos tiene como objetivo gestionar la información académica y administrativa de la universidad, incluyendo datos de estudiantes, cursos, inscripciones, calificaciones, recursos académicos y reportes estadísticos.
+                      </p>
+                      <ul>
+                        <li><strong>Mejora en la Gestión Académica</strong> </li>
+                        <li><strong>Optimización de Recursos Académicos</strong> </li>
+                        <li><strong>Datos Precisos para la Toma de Decisiones</strong> </li>
+                        <li><strong>Planificación Efectiva</strong> </li>
+                      </ul>
+                      <p>Mi contribución al proyecto fue en el área del front-end, donde me encargué principalmente del diseño y la implementación de la interfaz de usuario, asegurando que fuera fácil de usar y eficiente. Además, contribuyó significativamente en el diseño y la implementación de la base de datos, asegurando que esta cumpliera con los requisitos necesarios para una correcta gestión de la información académica y administrativa de la universidad.</p>
+                      <p>El sistema fue desarrollado utilizando tecnologías modernas de desarrollo web, como <strong>Next.js</strong>, <strong>React</strong> y <strong>Tailwind CSS</strong>, para garantizar una interfaz de usuario dinámica, atractiva y eficiente. Estas tecnologías permiten una experiencia de usuario fluida y un diseño responsivo adecuado para los requerimientos de la universidad.</p>
+                    </>
+                  }
+                  image="/"
+                  technologies={["React", "TypeScript", "Tailwind CSS", "SQL Server"]}
+                  demoUrl="https://ejemplo.com"
+                  repoUrl="https://github.com/usuario/proyecto"
+                />
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.7, duration: 0.5 }}
+              >
+                <ProjectCard
+                  title="En proceso"
+                  description= {
+                    <> 
+                    <p>La Municipalids, gestionaba todas sus forma manual utilizando papel</p>
+                      <p>Mi ciseñardad del sistema para los usuarios finales dentro de la municipalidad.</p> 
+                         <p>El sipalidad.</p> 
+                         </>
+                         }
                   image="/placeholder.svg?height=300&width=600"
                   technologies={["React", "TypeScript", "D3.js", "Material UI"]}
-                  demoUrl="https://ejemplo.com"
-                  repoUrl="https://github.com/usuario/proyecto"
-                />
-              </motion.div>
-              
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.9, duration: 0.5 }}
-              >
-                <ProjectCard
-                  title="Aplicación de Tareas"
-                  description="Aplicación para gestión de tareas con funcionalidades de arrastrar y soltar, etiquetas y recordatorios."
-                  image="/placeholder.svg?height=300&width=600"
-                  technologies={["React", "Redux", "Firebase", "CSS Modules"]}
-                  demoUrl="https://ejemplo.com"
-                  repoUrl="https://github.com/usuario/proyecto"
-                />
-              </motion.div>
-              
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 1.1, duration: 0.5 }}
-              >
-                <ProjectCard
-                  title="Portafolio Personal"
-                  description="Sitio web personal para mostrar proyectos y experiencia profesional."
-                  image="/placeholder.svg?height=300&width=600"
-                  technologies={["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"]}
                   demoUrl="https://ejemplo.com"
                   repoUrl="https://github.com/usuario/proyecto"
                 />
@@ -198,7 +213,7 @@ function ProjectCard({
   repoUrl,
 }: {
   title: string
-  description: string
+  description: JSX.Element;
   image: string
   technologies: string[]
   demoUrl: string
