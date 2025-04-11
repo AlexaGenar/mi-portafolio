@@ -8,22 +8,10 @@ import { ModeToggle } from "../components/mode-toggle"
 
 const experiences = [
   {
-    year: "2025 - Presente",
+    year: "Presente",
     title: "Estudiante de Cuarto Año",
     company: "Universidad Nacional",
     description: "Cursando el cuarto año de la carrera de Ingeniería Informática con especialización en desarrollo web."
-  },
-  {
-    year: "2022 - 2023",
-    title: "Asistente de Investigación",
-    company: "Laboratorio de Tecnologías Web",
-    description: "Participación en proyecto de investigación sobre aplicaciones web progresivas y experiencia de usuario."
-  },
-  {
-    year: "2021 - 2022",
-    title: "Voluntaria Técnica",
-    company: "ONG Tecnología para Todos",
-    description: "Desarrollo de sitio web informativo y capacitación en herramientas digitales para miembros de la comunidad."
   }
 ]
 
@@ -105,7 +93,7 @@ export default function ExperiencePage() {
               transition={{ delay: 0.4, duration: 0.6 }}
               className="mt-10 bg-white dark:bg-gray-800 shadow-lg rounded-xl p-6 border border-gray-100 dark:border-gray-700"
             >
-              <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-1">Tu Nombre</h2>
+              <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-1">Génesis Gómez</h2>
               <p className="text-lg bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent font-medium">
                 Estudiante de Ingeniería Informática
               </p>
@@ -171,7 +159,7 @@ export default function ExperiencePage() {
                     className="mb-10 relative"
                   >
                     <div className="absolute -left-16 mt-1.5 w-10 h-10 rounded-full bg-gradient-to-r from-pink-400 to-purple-400 border-2 border-white dark:border-gray-800 flex items-center justify-center">
-                      <span className="text-white text-sm font-medium">{2023 - index}</span>
+                      <span className="text-white text-sm font-medium">{2025 - index}</span>
                     </div>
                     <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md border border-gray-50 dark:border-gray-700">
                       <span className="text-sm font-medium bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent">
@@ -184,7 +172,7 @@ export default function ExperiencePage() {
                       {/* Tecnologías usadas en cada experiencia */}
                       <div className="mt-4 flex flex-wrap gap-2">
                         {index === 0 && (
-                          ["Algoritmos", "Bases de Datos", "Desarrollo Web", "Inteligencia Artificial"].map((tech) => (
+                          ["Algoritmos", "Bases de Datos", "Desarrollo Web"].map((tech) => (
                             <span key={tech} className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200">
                               {tech}
                             </span>
