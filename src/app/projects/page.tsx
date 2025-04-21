@@ -198,9 +198,9 @@ export default function ProjectsPage() {
                          </>
                          }
                   image="/arq.png"
-                  technologies={["React", "TypeScript", "Arduino UNO ", "Protoboard"]}
+                  technologies={["Html", "JavaScript","Css",  "Arduino UNO ", "Protoboard"]}
                   demoUrl="https://joseabh.github.io/AppAlertaRio/"
-                  repoUrl="https://github.com/usuario/proyecto" 
+                  repoUrl="https://github.com/JoseABH/AppAlertaRio" 
                 />
               </motion.div>
             </div>
