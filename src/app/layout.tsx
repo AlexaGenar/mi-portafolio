@@ -10,6 +10,7 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "Génesis Gómez | Frontend Developer",
   description: "Portfolio personal de Génesis Gómez, Front End Engineer",
+  viewport: "width=device-width, initial-scale=1",
 }
 
 export default function RootLayout({
@@ -23,7 +24,9 @@ export default function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
           <div className="min-h-screen flex flex-col">
             <div className="flex-grow">
-              {children}
+             <div className="container mx-auto px-4">
+             {children}
+             </div>
             </div>
             <footer className="py-6 border-t border-gray-200 dark:border-gray-800">
               <div className="container mx-auto px-4 flex justify-center">
