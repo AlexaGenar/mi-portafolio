@@ -142,7 +142,7 @@ export default function ProjectsPage() {
                   image="/sad_municipal.png"
                   technologies={["Next.js", "TypeScript", "Tailwind CSS", "React", "MySQL", "Nest.js"]}
                   demoUrl="https://rrhh-nandayure.vercel.app/auth/login"
-                  repoUrl="https://github.com/usuario/proyecto"
+                  repoUrl="https://github.com/JosePabloSG/NandayureFrontend.git"
                 />
               </motion.div>
               
@@ -169,10 +169,10 @@ export default function ProjectsPage() {
                       <p>El sistema fue desarrollado utilizando tecnologías modernas de desarrollo web, como <strong>Next.js</strong>, <strong>React</strong> y <strong>Tailwind CSS</strong>, para garantizar una interfaz de usuario dinámica, atractiva y eficiente. Estas tecnologías permiten una experiencia de usuario fluida y un diseño responsivo adecuado para los requerimientos de la universidad.</p>
                     </>
                   }
-                  image="/"
+                  image="/inv.png"
                   technologies={["React", "TypeScript", "Tailwind CSS", "SQL Server"]}
-                  demoUrl="https://ejemplo.com"
-                  repoUrl="https://github.com/usuario/proyecto"
+                  demoUrl=""
+                  repoUrl="https://github.com/JosePabloSG/Universidad-Innovacion-y-Conocimiento.git"
                 />
               </motion.div>
 
@@ -200,7 +200,7 @@ export default function ProjectsPage() {
                   image="/arq.png"
                   technologies={["React", "TypeScript", "Arduino UNO ", "Protoboard"]}
                   demoUrl="https://joseabh.github.io/AppAlertaRio/"
-                  repoUrl="https://github.com/usuario/proyecto"
+                  repoUrl="https://github.com/usuario/proyecto" 
                 />
               </motion.div>
             </div>
