@@ -18,7 +18,7 @@ const experiences = [
 export default function ExperiencePage() {
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900 py-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
-      <div className="flex justify-between items-center mb-8">
+      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8">
         <Link href="/" className="text-xl font-bold text-gray-900 dark:text-white">
           Inicio
         </Link>
@@ -30,13 +30,13 @@ export default function ExperiencePage() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 0.1 }}
           transition={{ delay: 0.5, duration: 1 }}
-          className="absolute -top-24 -right-24 w-96 h-96 bg-pink-300 dark:bg-pink-600 rounded-full mix-blend-multiply filter blur-3xl opacity-10"
+          className="absolute -top-24 -right-24 w-72 h-72 bg-pink-300 dark:bg-pink-600 rounded-full mix-blend-multiply filter blur-3xl opacity-10"
         />
         <motion.div 
           initial={{ opacity: 0 }}
           animate={{ opacity: 0.1 }}
           transition={{ delay: 0.7, duration: 1 }}
-          className="absolute -bottom-24 -left-24 w-96 h-96 bg-purple-300 dark:bg-purple-600 rounded-full mix-blend-multiply filter blur-3xl opacity-10"
+          className="absolute -bottom-24 -left-24 w-72 h-72 bg-purple-300 dark:bg-purple-600 rounded-full mix-blend-multiply filter blur-3xl opacity-10"
         />
         
         {/* Título principal con gradiente */}
@@ -138,7 +138,7 @@ export default function ExperiencePage() {
             className="lg:col-span-7"
           >
             <div className="prose prose-lg dark:prose-invert max-w-none">
-              <p className="text-2xl font-light leading-relaxed text-gray-600 dark:text-gray-300">
+              <p className="text-2xl font-light leading-relaxed text-gray-600 dark:text-gray-300 text-center sm:text-left">
                 Mi <span className="font-medium text-pink-500">recorrido académico</span> y 
                 <span className="font-medium text-purple-500"> experiencias formativas</span> que han 
                 moldeado mi perfil profesional en desarrollo.
@@ -149,7 +149,7 @@ export default function ExperiencePage() {
             <div className="mt-12">
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-8">Mi Trayectoria Académica</h3>
               
-              <div className="relative border-l-2 border-gray-200 dark:border-gray-700 pl-10 ml-6">
+              <div className="relative border-l-2 border-gray-200 dark:border-gray-700 pl-6 sm:pl-10 ml-4 sm:ml-6">
                 {experiences.map((experience, index) => (
                   <motion.div
                     key={experience.year}
@@ -170,7 +170,7 @@ export default function ExperiencePage() {
                       <p className="mt-2 text-gray-500 dark:text-gray-400">{experience.description}</p>
                       
                       {/* Tecnologías usadas en cada experiencia */}
-                      <div className="mt-4 flex flex-wrap gap-2">
+                      <div className="mt-4 flex flex-wrap gap-2 justify-center sm:justify-start">
                         {index === 0 && (
                           ["Algoritmos", "Bases de Datos", "Desarrollo Web"].map((tech) => (
                             <span key={tech} className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200">

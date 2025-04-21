@@ -7,7 +7,7 @@ import Link from "next/link"
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900 py-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
-      <div className="flex justify-between items-center mb-8">
+      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8">
         <Link href="/" className="text-xl font-bold no-underline text-gray-900 dark:text-white">
           Inicio
         </Link>
@@ -76,7 +76,7 @@ export default function HomePage() {
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-6">Explora mi trabajo</h3>
               
               {/* Contenedor centrado para los botones */}
-              <div className="flex flex-wrap gap-4 justify-center lg:justify-start ml-10">
+              <div className="flex flex-wrap gap-4 justify-center lg:justify-start lg:ml-10">
                 <a 
                   href="/about" 
                   className="inline-block bg-gradient-to-r from-pink-500 to-purple-500 text-white font-medium py-4 px-8 rounded-full shadow-md transition-all duration-300 w-48 text-center no-underline z-10 relative"
@@ -102,6 +102,12 @@ export default function HomePage() {
                 >
                 Descargar CV
                </a>
+               <a 
+                  href="/contact" 
+                  className="inline-block bg-white dark:bg-gray-800 text-pink-500 font-medium py-4 px-8 rounded-full shadow-md border border-pink-200 dark:border-pink-800 transition-all duration-300 w-48 text-center no-underline z-10 relative"
+                >
+                  Contáctame
+                </a>
               </div>
             </motion.div>
           </motion.div>
@@ -143,7 +149,7 @@ export default function HomePage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5, duration: 0.6 }}
-              className="mt-16 bg-white dark:bg-gray-800 shadow-lg rounded-xl p-6 border border-gray-100 dark:border-gray-700"
+              className="mt-16 mx-auto max-w-md bg-white dark:bg-gray-800 shadow-lg rounded-xl p-6 border border-gray-100 dark:border-gray-700"
             >
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">Tecnologías Favoritas</h3>
               
