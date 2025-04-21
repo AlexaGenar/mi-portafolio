@@ -11,6 +11,9 @@ export const metadata: Metadata = {
   title: "Génesis Gómez | Frontend Developer",
   description: "Portfolio personal de Génesis Gómez, Front End Engineer",
   viewport: "width=device-width, initial-scale=1",
+  icons: {
+    icon: "/logo.png", 
+  },
 }
 
 export default function RootLayout({
