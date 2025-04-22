@@ -8,7 +8,7 @@ export function ModeToggle() {
   const { theme, setTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
   
-  // Manejar hidratación
+
   useEffect(() => {
     setMounted(true)
   }, [])

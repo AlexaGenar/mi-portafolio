@@ -33,9 +33,6 @@ export default function Navbar() {
               <Link href="/" onClick={() => setOpen(false)}>
                 Inicio
               </Link>
-              <Link href="/experiencia" onClick={() => setOpen(false)}>
-                Experiencia
-              </Link>
             </div>
           </SheetContent>
         </Sheet>
