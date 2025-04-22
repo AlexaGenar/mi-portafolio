@@ -1,6 +1,5 @@
 "use client"
 
-import Image from "next/image"
 import Link from "next/link"
 import { motion } from "framer-motion"
 import { ModeToggle } from "../components/mode-toggle"
@@ -52,33 +51,29 @@ export default function ProjectsPage() {
             transition={{ delay: 0.2, duration: 0.6 }}
             className="lg:col-span-5"
           >
-            {/* Foto con efectos visuales */}
-            <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-pink-200 to-purple-200 dark:from-pink-300 dark:to-purple-400 transform -rotate-6 rounded-2xl" />
-              <div className="relative rounded-2xl overflow-hidden border-4 border-white dark:border-gray-800 shadow-xl">
-                <Image
-                  src="/placeholder.svg?height=600&width=300"
-                  alt=""
-                  width={450}
-                  height={100}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              
-              {/* Elementos decorativos alrededor de la foto */}
-              <motion.div 
-                initial={{ scale: 0 }}
-                animate={{ scale: 1 }}
-                transition={{ delay: 0.9, type: "spring" }}
-                className="absolute -bottom-6 -right-6 w-24 h-24 bg-yellow-200 dark:bg-yellow-300 rounded-full mix-blend-multiply filter blur-xl opacity-70"
-              />
-              <motion.div 
-                initial={{ scale: 0 }}
-                animate={{ scale: 1 }}
-                transition={{ delay: 1.1, type: "spring" }}
-                className="absolute -top-6 -left-6 w-24 h-24 bg-blue-200 dark:bg-blue-300 rounded-full mix-blend-multiply filter blur-xl opacity-70"
-              />
-            </div>
+          <div className="relative">
+          {/* Fondo decorativo inclinado */}
+         <div className="absolute inset-0 bg-gradient-to-r from-pink-200 to-purple-200 dark:from-pink-300 dark:to-purple-400 transform -rotate-6 rounded-2xl" />
+
+         <div className="relative rounded-2xl overflow-hidden border-4 border-white dark:border-gray-800 shadow-xl h-28" />
+
+  {/* Burbuja decorativa inferior */}
+  <motion.div 
+    initial={{ scale: 0 }}
+    animate={{ scale: 1 }}
+    transition={{ delay: 0.9, type: "spring" }}
+    className="absolute -bottom-6 -right-6 w-24 h-24 bg-yellow-200 dark:bg-yellow-300 rounded-full mix-blend-multiply filter blur-xl opacity-70"
+  />
+
+  {/* Burbuja decorativa superior */}
+  <motion.div 
+    initial={{ scale: 0 }}
+    animate={{ scale: 1 }}
+    transition={{ delay: 1.1, type: "spring" }}
+    className="absolute -top-6 -left-6 w-24 h-24 bg-blue-200 dark:bg-blue-300 rounded-full mix-blend-multiply filter blur-xl opacity-70"
+  />
+</div>
+
             
             {/* Tarjeta de habilidades */}
             <motion.div 
